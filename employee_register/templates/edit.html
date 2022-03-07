@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <form method="POST" action="/update/{{employee.ebn id}}">
+    <form method="POST" action="/update/{{employee.eid}}">
         {% csrf_token %} 
         <div>
             <br>
@@ -22,25 +24,25 @@
             </div>
         </div>
         <div>
-            <p> Employee First Name:</p>
+            <p>Employee First Name:</p>
             <div>
                 <input type="text" name="firstname" value="{{employee.firstname}}" />
             </div>
         </div>
         <div>
-            <p> Employee Last Name:</p>
+            <p>Employee Last Name:</p>
             <div>
                 <input type="text" name="lastname" value="{{employee.lastname}}" />
             </div>
         </div>
         <div>
-            <p> Employee Email:</p>
+            <p>Employee Email:</p>
             <div>
-                <input type="text" name="email" value="{{employee.email}}" />
+                <input type="email" name="email" value="{{employee.email}}" />
             </div>
         </div>
         <div>
-            <p> Employee Contact:</p>
+            <p>Employee Contact:</p>
             <div>
                 <input type="text" name="contact" value="{{employee.contact}}" />
             </div>

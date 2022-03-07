@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Record</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
  <table>
@@ -19,8 +21,9 @@
          </tr>
      </thead>
      <tbody>
+         {%for employee in employees %}
          <tr>
-             <td>{{ employee.eid }}</td>
+             <td>{{employee.eid }}</td>
              <td>{{employee.firstname }}</td>
              <td>{{employee.lastname }}</td>
              <td>{{employee.email }}</td>

@@ -1,10 +1,13 @@
-from django.contrib import admin
+# from django.contrib import admin 
 from django.urls import path
 # from django.urls.conf import include
 from employee_register import views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
+    # path('',include('employee_register.urls')),
+
+    path('',views.emp),
     path('emp',views.emp),
     path('show',views.show),
     path('edit/<int:id>',views.edit),
