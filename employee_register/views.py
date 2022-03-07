@@ -17,8 +17,8 @@ def emp(request):
     return render(request, 'index.html',{'form':form})
 
 def show(request):
-    employees = Employee.objects.all()
-    return render(request, 'show.html',{'employees':employees})
+    employee = Employee.objects.all()
+    return render(request, 'show.html',{'employee':employee})
 
 def edit(request, id):
     employee = Employee.objects.get(id=id)
@@ -30,11 +30,12 @@ def update(request,id):
     if form.is_valid():
         form.save()
         return redirect("/show")
+
     return render(request, 'edit.html',{'employee':employee})
 
 def destroy(request,id):
     employee = Employee.objects.get(id=id)
     employee.delete()
     return redirect("/show")
-    
+
 
