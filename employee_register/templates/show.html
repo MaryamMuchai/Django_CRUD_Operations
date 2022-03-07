@@ -20,14 +20,14 @@
      </thead>
      <tbody>
          <tr>
-             <td>{{ employee.id }}</td>
+             <td>{{ employee.eid }}</td>
              <td>{{employee.firstname }}</td>
              <td>{{employee.lastname }}</td>
              <td>{{employee.email }}</td>
              <td>{{employee.contact }}</td>
              <td>
-                 <a href="/edit/{{ employee.id }}">Edit</a>
-                 <a href="/delete/{{ employee.id }}">Delete</a>
+                 <a href="/edit/{{ employee.eid }}">Edit</a>
+                 <a href="/delete/{{ employee.eid }}">Delete</a>
              </td>
          </tr>
          {% endfor %}
